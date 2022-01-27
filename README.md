@@ -1,7 +1,7 @@
 Prodavnica-mini-cms
 Mini-cms. Domaći u sklopu Django kursa. Sajt za prodaju skutera
 
-Sadržaj
+Sadržaj:
 
 početna stranica - /
 
