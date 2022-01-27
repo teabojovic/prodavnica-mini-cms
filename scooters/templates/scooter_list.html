@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width", initial-scale=1.0>
+    <title>Scooters</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for scooter in scooters %}
+        <div class="col">
+          <div class="card">
+            <a href = "{{scooter.id}}">
+            <img src="https://st4.depositphotos.com/14953852/22772/v/600/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg" height = "250" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <h3 class="card-title"> {{scooter.name}}</h3>
+                <h5 class="text-right">{{scooter.category}}</h5>
+                <p class="card-text"> {{scooter.price}}e</p>
+                {%if scooter.available == True %}
+                <p style="color:green">Available</p>
+                {% else %}
+                <p style="color:red">Not available</p>
+                {% endif %}
+                <p class="card-text"><small class="text-muted">The discount is valid until February 3</small></p>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+</div>
+</body>
+</html>
