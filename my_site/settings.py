@@ -55,7 +55,7 @@ ROOT_URLCONF = 'my_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['scooters'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
